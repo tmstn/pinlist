@@ -1,0 +1,14 @@
+version: "3"
+
+tasks:
+  build:
+    cmds:
+      - go build -v -o ./.dist/pinlist **.go
+
+  install:
+    cmds:
+      - go install
+
+  vulns:
+    cmds:
+      - govulncheck ./...
